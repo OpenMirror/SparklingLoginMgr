@@ -36,7 +36,7 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
-    echo $mycsvfile[0][1];
+    echo $mycsvfile[0][0];
     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
     
 
