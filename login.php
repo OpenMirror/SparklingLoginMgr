@@ -26,19 +26,6 @@
         }
     }
         
-            
-            
-            
-        
-    
-
-
-
-
-
-
-
-
 
     $postdata = http_build_query(
         array(
