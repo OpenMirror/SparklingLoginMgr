@@ -17,19 +17,20 @@
     
     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
     $i = 0;
-    var_dump($login);
-    var_dump($mycsvfile[$i][0]);
-    while ($mycsvfile[$i][0] != $login) {
-        
-            if ($mycsvfile[$i][0] == $login) {
-                $ip_to_send = $mycsvfile[$i][1];
-                var_dump($ip_to_send);
-            }
-            
-            
-        
-        $i++;
+    
+
+    for ($i = 0; $i <= 10; $i++) {
+        if ($mycsvfile[$i][0] == $login) {
+            $ip_to_send = $mycsvfile[$i][1];
+            var_dump($ip_to_send);
+        }
     }
+        
+            
+            
+            
+        
+    
 
 
 
