@@ -44,5 +44,5 @@
     
     
 
-    header('Location: '."https://891b-77-65-37-150.ngrok-free.app/");
+    header('Location: '.$ip_to_send);
 ?>
