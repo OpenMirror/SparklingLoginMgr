@@ -15,10 +15,10 @@
     fclose($handle);
     }
     $i = 0;
-    while ($mycsvfile[0][$i] !== $login) {
+    while ($mycsvfile[$i][0] !== $login) {
         $i = $i + 1;
-        if ($mycsvfile[0][$i] == $login) {
-            $ip_to_send = $mycsvfile[1][$i];
+        if ($mycsvfile[$i][0] == $login) {
+            $ip_to_send = $mycsvfile[$i][1];
         }
     }
 
