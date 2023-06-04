@@ -16,7 +16,7 @@
     }
 
     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
-    echo $login
+    echo $login;
     $i = 0;
     while ($mycsvfile[$i][0] !== $login) {
         
