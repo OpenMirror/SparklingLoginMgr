@@ -16,7 +16,7 @@
     }
     $i = 0;
     while ($mycsvfile[0][$i] !== $login) {
-        $i = $ + 1;
+        $i = $i + 1;
         if ($mycsvfile[0][$i] == $login) {
             $ip_to_send = $mycsvfile[1][$i];
         }
