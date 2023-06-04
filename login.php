@@ -19,10 +19,11 @@
     $i = 0;
     
 
-    for ($i = 0; $i <= 10; $i++) {
+    for ($i = 0; $i <= 100; $i++) {
         if ($mycsvfile[$i][0] == $login) {
             $ip_to_send = $mycsvfile[$i][1];
             var_dump($ip_to_send);
+            break;
         }
     }
         
