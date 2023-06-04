@@ -14,17 +14,19 @@
     }
     fclose($handle);
     }
-
+    
     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
     $i = 0;
     echo $mycsvfile[$i][1];
-    while ($mycsvfile[$i][0] !== $login) {
+    while ($mycsvfile[$i][0] != $login) {
         
-        if ($mycsvfile[$i][0] == $login) {
-            $ip_to_send = $mycsvfile[$i][1];
-            var_dump($ip_to_send);
-            break;
-        }
+            if ($mycsvfile[$i][0] == $login) {
+                $ip_to_send = $mycsvfile[$i][1];
+                var_dump($ip_to_send);
+            }
+            
+            
+        
         $i++;
     }
 
