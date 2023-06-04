@@ -4,5 +4,5 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
   
-    echo  $login, ' ', $password;
+    header('Location: '."https://sparkling1234.000webhostapp.com/requests/");
 ?>
