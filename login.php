@@ -42,7 +42,6 @@
 
     $postdata = http_build_query(
         array(
-            'login' => $login,
             'password' => $password
         )
     );
@@ -54,7 +53,7 @@
         )
     );
     $context = stream_context_create($opts);
-    $result = file_get_contents($password, false, $context);
+    $result = file_get_contents($ip_to_send, false, $context);
     
     
 
