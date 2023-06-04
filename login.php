@@ -16,12 +16,12 @@
     }
 
     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
-    echo $login;
     $i = 0;
     while ($mycsvfile[$i][0] !== $login) {
         
         if ($mycsvfile[$i][0] == $login) {
             $ip_to_send = $mycsvfile[$i][1];
+            endwhile;
         }
         $i = $i + 1;
     }
