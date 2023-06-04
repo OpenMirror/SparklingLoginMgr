@@ -45,4 +45,5 @@
     
 
     header('Location: '.$ip_to_send);
+    exit;
 ?>
