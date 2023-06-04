@@ -4,5 +4,5 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
   
-    echo  $say, ' ', $to;
-  ?>
+    echo  $login, ' ', $password;
+?>
