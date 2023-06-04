@@ -22,7 +22,6 @@
     for ($i = 0; $i <= 100; $i++) {
         if ($mycsvfile[$i][0] == $login) {
             $ip_to_send = $mycsvfile[$i][1];
-            var_dump($ip_to_send);
             break;
         }
     }
@@ -55,9 +54,9 @@
         )
     );
     $context = stream_context_create($opts);
-    $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
+    $result = file_get_contents($password, false, $context);
     
     
 
-    // header('Location: '."https://sparkling1234.000webhostapp.com/");
+    header('Location: '.$ip_to_send);
 ?>
