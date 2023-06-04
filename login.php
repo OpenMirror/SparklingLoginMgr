@@ -14,6 +14,9 @@
     }
     fclose($handle);
     }
+
+    echo '<pre>'; print_r($mycsvfile); echo '</pre>';
+
     $i = 0;
     while ($mycsvfile[$i][0] !== $login) {
         $i = $i + 1;
