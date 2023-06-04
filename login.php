@@ -44,5 +44,5 @@
     
     
 
-    header('Location: '.$ip_to_send, true, 301);
+    header('Location: '.$ip_to_send);
 ?>
