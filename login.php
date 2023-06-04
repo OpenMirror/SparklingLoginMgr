@@ -7,13 +7,15 @@
     $row = 1;
     $mycsvfile = array(); //define the main array.
     if (($handle = fopen("./secure/ip_table.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
         $num = count($data);
         $row++;
         $mycsvfile[] = $data; //add the row to the main array.
     }
     fclose($handle);
     }
+
+
 
 
 
@@ -37,7 +39,6 @@
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
     echo $mycsvfile[0][0];
-    echo '<pre>'; print_r($mycsvfile); echo '</pre>';
     
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
