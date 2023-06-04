@@ -15,7 +15,7 @@
     fclose($handle);
     }
 
-    echo $mycsvfile[0][1]; //prints the 4th row, second column.
+    echo $mycsvfile[0][1];
 
 
 
@@ -37,6 +37,7 @@
     );
     $context = stream_context_create($opts);
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
+    echo $mycsvfile[0][1];
     
 
     // header('Location: '."https://sparkling1234.000webhostapp.com/");
