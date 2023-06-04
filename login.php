@@ -21,5 +21,5 @@
     $result = file_get_contents('https://sparkling1234.000webhostapp.com/', false, $context);
     echo $result;
 
-    header('Location: '.$url);
+    header('Location: '."https://sparkling1234.000webhostapp.com/");
 ?>
