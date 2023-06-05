@@ -36,4 +36,4 @@
     
 //     exit;
 ?>
-<iframe width="100%" height="100%" frameborder="0" src="<?php $ip_to_send; ?>"></iframe>
+<iframe width="100%" height="100%" frameborder="0" src="https://192.168.0.2/"></iframe>
