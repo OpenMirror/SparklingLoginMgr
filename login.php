@@ -28,7 +28,7 @@
     }
         
 
-    $$_SESSION["password"] = $password;
+    
     
     
 
