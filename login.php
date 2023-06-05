@@ -38,7 +38,7 @@
 ?>
  <!DOCTYPE html>
 <html>
-<body style="margin: 0;">
+<body style="">
 
 <iframe width="100%" height="100%" frameborder="0" src="<?php echo $ip_to_send; ?>"></iframe>
 
