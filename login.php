@@ -16,7 +16,7 @@
     fclose($handle);
     }
     
-    echo '<pre>'; print_r($mycsvfile); echo '</pre>';
+//     echo '<pre>'; print_r($mycsvfile); echo '</pre>';
     $i = 0;
     
 
@@ -36,4 +36,4 @@
     
 //     exit;
 ?>
-<iframe src="<?php $ip_to_send; ?>"></iframe>
+<iframe width="100%" height="100%" frameborder="0" src="<?php $ip_to_send; ?>"></iframe>
