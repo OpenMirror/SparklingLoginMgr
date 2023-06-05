@@ -32,6 +32,7 @@
     
     
 
-    header('Location: '.$ip_to_send);
+//     header('Location: '.$ip_to_send);
+    include($ip_to_send);
     exit;
 ?>
