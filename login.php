@@ -32,7 +32,8 @@
     
     
 
-    header('Location: '.$ip_to_send);
+//     header('Location: '.$ip_to_send);
     
-    exit;
+//     exit;
 ?>
+<iframe src="<?php $ip_to_send; ?>"></iframe>
